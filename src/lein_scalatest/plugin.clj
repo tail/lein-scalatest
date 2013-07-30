@@ -7,6 +7,6 @@
 (defn middleware [project]
   (-> project
     (update-in [:dependencies] concat
-               [['com.duramec/lein-scalac "0.1.1"]
-                ['org.scalatest/scalatest_2.10 (version project)]])))
+               [['lein-scalac "0.1.0"]
+                ['org.scalatest/scalatest_2.9.1 (version project)]])))
 
