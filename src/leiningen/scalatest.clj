@@ -13,8 +13,9 @@
   [project]
   `(do
      (import org.scalatest.tools.Runner)
-     (org.scalatest.tools.Runner/run (into-array String ~(scalatest-props project)))
-     (System/exit 0)))
+     (if (org.scalatest.tools.Runner/run (into-array String ~(scalatest-props project)))
+       (System/exit 0)
+       (System/exit 1))))
 
 (defn- scalac-props
   [project]
